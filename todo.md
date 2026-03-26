@@ -1,0 +1,23 @@
+# サキドリ Project TODO
+
+- [x] プロジェクト初期化（Vite + React + TypeScript + TailwindCSS）
+- [x] デザインシステム策定（Gentle Pushテーマ、カラーパレット、フォント）
+- [x] ビジュアルアセット生成（ヒーロー画像、コーチキャラクター3体）
+- [x] ランディングページ（Home.tsx）
+- [x] オンボーディングフロー（先延ばしタイプ診断 + コーチ選択）
+- [x] ダッシュボード画面
+- [x] タスク管理ページ
+- [x] AIコーチチャットページ（模擬応答）
+- [x] ストリーク記録ページ
+- [x] ボトムナビゲーション
+- [x] AppContext（ローカルステート管理）
+- [x] web-db-user機能追加後のコンフリクト解消
+- [x] DBスキーマ設計（users, tasks, streaks, chat_messages, profiles）
+- [x] DBマイグレーション実行
+- [x] tRPCルーター実装（タスクCRUD、チャット、ストリーク、プロフィール）
+- [x] AIコーチチャットのLLM API連携（invokeLLM）
+- [x] フロントエンドをtRPC hooks連携に移行
+- [x] Vitestテスト作成（11テスト合格）
+- [ ] マーケティング素材作成（ロゴ・SNSコンテンツ・LP素材）
+- [ ] GitHubへのプッシュ
+- [ ] ドキュメント整備
