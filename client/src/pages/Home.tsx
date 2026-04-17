@@ -8,9 +8,8 @@ import { useLocation } from "wouter";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { trpc } from "@/lib/trpc";
 import { motion } from "framer-motion";
-import { ArrowRight, Brain, ListChecks, Flame, MessageCircle, Loader2, Eye } from "lucide-react";
-import { useEffect, useState } from "react";
-import PreviewModal from "@/components/PreviewModal";
+import { ArrowRight, Brain, ListChecks, Flame, MessageCircle, Loader2 } from "lucide-react";
+import { useEffect } from "react";
 
 const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663097564530/knVDDtcSL2Wdwe8QpUtBw5/hero-illustration-3o9Tg6SKiGmtzfGoKu7Nyg.webp";
 
@@ -43,7 +42,6 @@ const features = [
 
 export default function Home() {
   const [, setLocation] = useLocation();
-  const [previewOpen, setPreviewOpen] = useState(false);
   const { user, loading: authLoading } = useAuth();
   const profileQuery = trpc.profile.get.useQuery(undefined, {
     enabled: !!user,
@@ -116,15 +114,6 @@ export default function Home() {
               はじめる
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setPreviewOpen(true)}
-              className="text-teal hover:text-teal/80 hover:bg-teal/5 rounded-full gap-1.5"
-            >
-              <Eye className="w-4 h-4" />
-              プレビューを見る
-            </Button>
           </motion.div>
         </div>
       </section>
@@ -169,8 +158,6 @@ export default function Home() {
           </Button>
         </div>
       </section>
-
-      <PreviewModal open={previewOpen} onClose={() => setPreviewOpen(false)} />
     </div>
   );
 }
